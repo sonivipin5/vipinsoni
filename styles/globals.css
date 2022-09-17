@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #1D1D1D;
 }
 .contact{
   overflow: hidden;
@@ -33,3 +34,142 @@ body {
   transform: translate(10%) skewX(-30deg);
 
 }
+.square {
+  position: relative;
+  width: 100%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 50%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+:root{
+  --ham-width: 30px;
+  --ham-bgc: #0af2fa;
+}
+
+
+.hamburger{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+background-color: rgb(46, 44, 44);
+}
+.hamburger-active{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  visibility: visible;
+  top: 0;
+  left: 0;
+transition: all 200ms ease-in-out;
+
+  
+background-color: rgb(46, 44, 44);
+}
+.ham{
+  width: var(--ham-width);
+  height: 3px;
+  top: 2rem;
+  left: 1rem;
+position: absolute;
+background-color: var(--ham-bgc); 
+transition: all 200ms ease-in-out;
+}
+
+.ham::before{
+  content: "";
+  top: 10px;
+  width: var(--ham-width);
+  height: 3px;
+position: absolute;
+background-color: var(--ham-bgc); 
+transition: all 200ms ease-in-out;
+}
+.ham::after{
+  content: "";
+  top: 20px;
+  width: var(--ham-width);
+  height: 3px;
+position: absolute;
+background-color: var(--ham-bgc); 
+transition: all 200ms ease-in-out;
+}
+
+/* ham-active */
+
+.ham-active{
+  width: var(--ham-width);
+  height: 3px;
+  margin: 10px 0 0 2px;
+  top: 2rem;
+  left: 1rem;
+  position: absolute;
+  background-color: var(--ham-bgc); 
+  transform: rotate(45deg);
+  transition: all 200ms ease-in-out;
+}
+.ham-active::before{
+  content: '';
+  width: var(--ham-width);
+  top: 10px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--ham-bgc); 
+  transform: rotate(90deg);
+  transition: all 200ms ease-in-out;
+  display: none;
+}
+.ham-active::after{
+  content: '';
+  width: var(--ham-width);
+  height: 3px;
+  top: 1px;
+  position: absolute;
+  background-color: var(--ham-bgc); 
+  transform: rotate(90deg);
+  transition: all 200ms ease-in-out;
+}
+.contactUs{
+  width: 45%;
+  flex-direction: column;
+  display: flex;
+  margin: auto 1.5rem;
+}
+.contactUs input{
+  width: 45%;
+  height: 50px;
+  font-size: large;
+}
+
+.contactUs input:nth-child(1){
+  width: 50%;  
+  height: 50px;
+  display: flex;
+  margin: 0 0px 8px 0px;
+}
+.contactUs input:nth-child(2){
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  margin: 0 8px 8px 0;
+}
+.contactUs input:nth-child(3){
+  width: 100%;
+  
+  margin: 0 8px 8px 0;
+}
+.contactUs textarea{
+  width: 100%;
+ 
+  margin: 0 8px 8px 0;
+}
+
