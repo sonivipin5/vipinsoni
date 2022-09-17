@@ -35,10 +35,10 @@ const Navbar = () => {
 
 
   return (
-    <>
-      <div className="hidden xl:block w-[15%]  h-screen bg-[#181818]  ">
-        <header className="bg-[#181818] ">
-          <nav className="w-full">
+    <div className=" ">
+      <div className="hidden xl:block  bg-[#181818]  ">
+        <header className="hidden xl:block bg-[#181818] fixed ">
+          <nav className=" w-44  bg-[#181818]">
             <div className="text-white flex w-full flex-col h-52 justify-center items-center ">
               <Link href={"/"}>
                 <h1 className="cursor-pointer bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500  transition-all text-sha logo text-8xl font-extrabold">
@@ -71,6 +71,11 @@ const Navbar = () => {
                   Contact
                 </a>
               </Link>
+              <Link href="/">
+                <a className="border-b hover:text-[cyan] w-full py-3 inline-block h-screen">
+                  
+                </a>
+              </Link>
             </ul>
 
           </nav>
@@ -78,7 +83,7 @@ const Navbar = () => {
       </div>
       <div  className="cover absolute bg-[#181818] invisible xl:hidden z-[11]">
 
-      <div className="min-w-[320px] w-full h-[1000px] fixed bg-[#181818] ">
+      <div className="min-w-[320px] w-full  fixed bg-[#181818] ">
         <header className="bg-[#181818] ">
           <nav className="w-full ">
             <div className="text-white flex  flex-col  justify-center items-center ">
@@ -113,6 +118,11 @@ const Navbar = () => {
                   Contact
                 </a>
               </Link>
+              <Link href="/">
+                <a className="border-b hover:text-[cyan] w-full py-3 inline-block h-screen">
+                  
+                </a>
+              </Link>
             </ul>
 
           </nav>
@@ -120,10 +130,10 @@ const Navbar = () => {
       </div>
 
       </div>
-      <div onClick={hamToggel} className="xl:hidden z-[13] w-10 h-10 top-6 left-[10px] absolute">
+      <div onClick={hamToggel} className="ham xl:hidden">
       </div>
-      <span  className="ham z-[12] xl:hidden"></span>
-    </>
+        <span onClick={hamToggel} className="hamBack"></span>
+    </div>
   );
 };
 

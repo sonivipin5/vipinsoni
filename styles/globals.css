@@ -1,39 +1,79 @@
 @tailwind base;
 @tailwind components;
+.text-gradient{
+  @apply bg-clip-text text-transparent bg-gradient-to-bl from-[#05acff] to-[#08dcf8];
+}
 @tailwind utilities;
+
 
 
 html,
 body {
+  display: flex;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: #1D1D1D;
+    background-color:#1D1D1D ;
+    overflow-x: hidden;
 }
-.contact{
-  overflow: hidden;
+@media only screen  and (max-width:650px) {
+  body{
+    overflow: visible;
+  }
 }
-.contact:hover{
- color: black;
- transition: all 400ms ease-in-out;
+
+
+
+
+:root{
+  --primary-color:#1D1D1D;
+  --secondary-color: #181818;
+  --base-text-color: #706e6e;
+  --input-color:#2B2B2B;
+  --ham-width: 30px;
+  --ham-bgc: #0af2fa;
 }
-.contact span{
+*{
+  box-sizing: border-box;
+  
+}
+
+.cyanSlideEffect{
+  width: 15rem;
+  margin: 1.5rem 0;
+  height: 3.5rem;
+  border: 1px solid #08dcf8;
+  color: #08dcf8;
+  font-size: larger;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 3px;
+  font-weight: bold;
+  overflow: hidden; 
+}
+.cyanSlideEffect:hover{
+  color: black;
+}
+.cyanSlideEffect::before{
+  content: '';
+  position: absolute;
   width: 120%;
   height: 100%;
-  left: -50px;
   top: 0;
-  transform: translate(-100%) skewX(-30deg);
-  position: absolute;
-  background-color: cyan;
-  color: black;
+  left: -20px;
+  color: #08dcf8;
+  background-color: #08dcf8;
+  transform: translate(-100%) skew(-30deg);
+  transition:all 300ms ease-in-out;
+}
+.cyanSlideEffect:hover::before{
   z-index: -1;
-  transition: all 300ms ease-in-out;
+  transform: translate(0%) skew(-30deg);
+  transition:all 300ms ease-in-out;
 }
-.contact:hover span{
-  transform: translate(10%) skewX(-30deg);
 
-}
 .square {
   position: relative;
   width: 100%;
@@ -44,17 +84,6 @@ body {
   display: block;
   padding-bottom: 50%;
 }
-
-.content {
-  width: 100%;
-  height: 100%;
-}
-
-:root{
-  --ham-width: 30px;
-  --ham-bgc: #0af2fa;
-}
-
 
 .hamburger{
   width: 50px;
@@ -80,9 +109,10 @@ background-color: rgb(46, 44, 44);
   height: 3px;
   top: 2rem;
   left: 1rem;
-position: absolute;
+position: fixed;
 background-color: var(--ham-bgc); 
 transition: all 200ms ease-in-out;
+z-index: 11;
 }
 
 .ham::before{
@@ -103,6 +133,16 @@ position: absolute;
 background-color: var(--ham-bgc); 
 transition: all 200ms ease-in-out;
 }
+/* ham-cover */
+.hamBack{
+  width: 50px;
+  height: 50px;
+  z-index: 16;
+  top: 20px;
+  left: 10px;
+  position: fixed;
+  background-color: transparent;
+}
 
 /* ham-active */
 
@@ -112,7 +152,7 @@ transition: all 200ms ease-in-out;
   margin: 10px 0 0 2px;
   top: 2rem;
   left: 1rem;
-  position: absolute;
+  position: fixed;
   background-color: var(--ham-bgc); 
   transform: rotate(45deg);
   transition: all 200ms ease-in-out;
@@ -139,37 +179,61 @@ transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 .contactUs{
-  width: 45%;
+  width: 50%;
+  min-width: 350px;
   flex-direction: column;
   display: flex;
-  margin: auto 1.5rem;
+  margin: auto 2rem;
+  column-gap: 4rem;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+.contactUs div{
+  display: inline-flex;
+  column-gap: 16px;
+  column-count: 2;
+  overflow-x: hidden;
+
 }
 .contactUs input{
-  width: 45%;
+  text-indent: 20px;
+  width: 100%;
   height: 50px;
-  font-size: large;
+  font-size: larger;
+  outline: none;
+  color: var(--base-text-color);
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: var(--input-color);
+  margin-top: 1rem;
+  overflow-x: hidden;
+  
+  
+}
+.contactUs input::placeholder{
+  color: var(--base-text-color);
+  overflow: hidden;
+
 }
 
-.contactUs input:nth-child(1){
-  width: 50%;  
-  height: 50px;
-  display: flex;
-  margin: 0 0px 8px 0px;
-}
-.contactUs input:nth-child(2){
-  width: 50%;
-  display: flex;
-  justify-content: end;
-  margin: 0 8px 8px 0;
-}
-.contactUs input:nth-child(3){
-  width: 100%;
-  
-  margin: 0 8px 8px 0;
-}
 .contactUs textarea{
+  text-indent: 20px;
   width: 100%;
- 
+  background-color: var(--input-color);
   margin: 0 8px 8px 0;
+  outline: none;
+  font-size: larger;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--base-text-color);
+  margin-top: 1rem;
+  overflow: hidden;
 }
+.contactUs textarea::placeholder{
+  color: var(--base-text-color);
+  overflow: hidden;
+
+
+}
+
 
