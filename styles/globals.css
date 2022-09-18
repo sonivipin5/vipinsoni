@@ -34,6 +34,10 @@ body {
   --ham-width: 30px;
   --ham-bgc: #0af2fa;
 }
+
+.btc{
+  color: #706e6e;
+}
 *{
   box-sizing: border-box;
   
@@ -234,6 +238,11 @@ transition: all 200ms ease-in-out;
   overflow: hidden;
 
 
+}
+.mySkillPage{
+  column-count: 2;
+  column-gap: 30px;
+  display: inline-flex;
 }
 
 
