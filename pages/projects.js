@@ -1,16 +1,76 @@
 
 
-export default function Home() {
+import React from 'react'
 
- 
-    return (
-      <div className="bg-[#1D1D1D] w-screen h-screen flex justify-center items-center"> 
-  
-          <div className="home transition-all w-full h-[inherit] ">
-            <div className="text-7xl p-10 font-extrabold">Projects</div>
+const Projects = () => {
+  return (
+    <div className="container m-auto ">
+    <div className=' w-full min-h-screen overflow-hidden'>
+      {/* Heading section */}
+      <div className="m-auto">
+      <h1 className='text-center text-7xl w-full text-gradient py-5 font-bold' data-aos='fade-down'>My Projects</h1>
+      </div>
+
+      {/* Projects section */}
+      <div className='w-full text-white lg:count-3 text-center m-auto  mt-5'>
+
+          {/* MERN Projects */}
+          <div className=' w-[95%] mx-10 ' data-aos='zoom-in'>
+            <h2 className='text-3xl font-bold link'>MERN Projects</h2>
+
+            <div className='card w-fit h-fit m-auto my-7'>
+              <img src="/favicon.ico" alt="" />
+            </div>
+            
+          </div>
+
+          {/* NextJs + Wordpress */}
+          <div className=' w-[95%] mx-10' data-aos='zoom-in'>
+            <h3 className='text-3xl font-bold link'>NextJs + Wordpress</h3>
+
+            <div className='card w-fit h-fit m-auto my-7'>
+              <img src="/favicon.ico" alt="" />
+            </div>
+
+          </div>
+          {/* NextJs + Strapi */}
+          <div className=' w-[95%] mx-10' data-aos='zoom-in'>
+            <h4 className='text-3xl font-bold link'>NextJs + Strapi</h4>
+
+            <div className='card w-fit h-fit m-auto my-7'>
+              <img src="/favicon.ico" alt="" />
+            </div>
+
           </div>
       </div>
-    )
-  }
+
+      {/* Other project section */}
+      <div className=' w-full p-5 ' data-aos='fade-up'>
+        <h5 className='text-3xl font-bold link text-center'> Other Projects</h5>
+        
+          <div className="flex justify-center flex-wrap">
+          <div className='card mx-5 my-7' data-aos='zoom-in'>
+                <img src="/favicon.ico" alt="" />
+          </div>
+          <div className='card mx-5 my-7' data-aos='zoom-in'>
+                <img src="/favicon.ico" alt="" />
+          </div>
+          <div className='card mx-5 my-7' data-aos='zoom-in'>
+                <img src="/favicon.ico" alt="" />
+          </div>
+          <div className='card mx-5 my-7' data-aos='zoom-in'>
+                <img src="/favicon.ico" alt="" />
+          </div>
+          
+          </div>
+      </div>
+
+    </div>
+    </div>
+  )
+}
+
+export default Projects
+
   
   

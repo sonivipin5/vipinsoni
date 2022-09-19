@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import ProgressBar from "@ramonak/react-progress-bar"
 import Link from 'next/link'
 
 const Skills = () => {
-  const now = 60;
+  
   return (
-    <div className='mySkillPage w-screen h-screen'>
+    <div className="container m-auto">
+    <div className=' lg:count-2 w-full min-h-screen m-auto overflow-hidden'>
 
       {/* Skills & Experience */}
-      <div className="ml-56 mt-28">
-        <h2 className='text-7xl p-3 font-bold text-gradient w-[30vw]'>Skills & <br /> Experience</h2><br />
+      <div  className="skill lg:w-[50%] p-5 m-auto"  data-aos="fade-right">
+        <h1 className='text-7xl p-3 font-bold text-gradient w-full '>Skills & <br /> Experience</h1><br />
 
         <div className="text-white text-xl text-justify">
 
@@ -30,31 +31,32 @@ const Skills = () => {
       </div>
 
       {/* Skill Bar Section */}
-      <div className="mr-16 mt-32 w-[50vw] ">
+      <div className="   lg:w-[50%] p-5 m-auto" data-aos='fade-left'>
         <p className='text-white text-2xl font-bold py-2'>Front-end</p>
-        <ProgressBar bgColor='#08dcf8' baseBgColor='#2b2b2b' width='40vw' height='3px' isLabelVisible={false} completed={90} /><br />
+        <ProgressBar bgColor='#08dcf8' baseBgColor='#2b2b2b' width={`lg:w-[40vw]`} height='3px' isLabelVisible={false} completed={90} /><br />
 
         <p className='text-white text-2xl font-bold py-2'>NextJs</p>
-        <ProgressBar bgColor='#05acff' baseBgColor='#2b2b2b' width='40vw' height='3px' isLabelVisible={false} completed={75} /><br />
+        <ProgressBar bgColor='#05acff' baseBgColor='#2b2b2b' width={`${"lg:w-[40vw]?"}`} height='3px' isLabelVisible={false} completed={75} /><br />
 
         <p className='text-white text-2xl font-bold py-2'>ReactJs</p>
-        <ProgressBar bgColor='#800080' baseBgColor='#2b2b2b' width='40vw' height='3px' isLabelVisible={false} completed={70} /><br />
+        <ProgressBar bgColor='#800080' baseBgColor='#2b2b2b' width={`${"lg:w-[40vw]?"}`} height='3px' isLabelVisible={false} completed={70} /><br />
 
         <p className='text-white text-2xl font-bold py-2'>Back-end</p>
-        <ProgressBar bgColor='#FF2253' baseBgColor='#2b2b2b' width='40vw' height='3px' isLabelVisible={false} completed={60} /><br />
+        <ProgressBar bgColor='#FF2253' baseBgColor='#2b2b2b' width={`${"lg:w-[40vw]?"}`} height='3px' isLabelVisible={false} completed={60} /><br />
 
         <div className='col-span-2 inline-flex gap-5 text-white  w-full '>
-          <div className="w-2/4  h-[30vh] bg-[#2b2b2b]">
+          <div className="w-2/4 bg-[#2b2b2b]">
             <h3 className='text-2xl font-extrabold text-center pt-5'>Front-end development</h3>
             <p className='btc font-bold tracking-tight leading-6 text-lg p-5'>I am using in front-end development - Html, Css, Scss, JavaScript, ReactJs and NextJs.</p>
           </div>
-          <div className="w-2/4 h-[30vh] bg-[#2b2b2b]">
+          <div className="w-2/4 bg-[#2b2b2b]">
             <h3 className='text-2xl font-extrabold text-center pt-5'>Back-end development</h3>
             <p className='btc font-bold tracking-tight leading-6 text-lg p-5'>I am using in Back-end development - MongoDb, Express, NodeJs and open source CMS WordPress and Strapi .</p>
           </div>
         </div>
       </div>
       
+    </div>
     </div>
   )
 }

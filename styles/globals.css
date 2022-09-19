@@ -3,25 +3,33 @@
 .text-gradient{
   @apply bg-clip-text text-transparent bg-gradient-to-bl from-[#05acff] to-[#08dcf8];
 }
+@layer utilities {
+  .count-2{
+    column-count: 2;
+    display: inline-flex;}
+  .count-3{
+    column-count: 3;
+    display: inline-flex;}
+  .blue-gradient{
+    background: rgb(99,102,241);
+background: linear-gradient(133deg, rgba(99,102,241,1) 0%, rgba(168,85,247,1) 50%, rgba(168,85,247,1) 100%);}
+}
 @tailwind utilities;
 
 
 
 html,
 body {
-  display: flex;
+  min-width: 475px;
+  height:100%;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color:#1D1D1D ;
-    overflow-x: hidden;
+    
 }
-@media only screen  and (max-width:650px) {
-  body{
-    overflow: visible;
-  }
-}
+
 
 
 
@@ -35,13 +43,14 @@ body {
   --ham-bgc: #0af2fa;
 }
 
+
 .btc{
   color: #706e6e;
 }
-*{
-  box-sizing: border-box;
-  
+.link{
+  color:  #05acff;
 }
+
 
 .cyanSlideEffect{
   width: 15rem;
@@ -96,18 +105,48 @@ body {
   border-radius: 50%;
 background-color: rgb(46, 44, 44);
 }
-.hamburger-active{
-  width: 100%;
+.active1{
+  width: 51%;
   height: 100%;
-  position: absolute;
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+transition: all 400ms ease-in-out;
+background-color:  rgb(83, 11, 165);
+/* [#05acff] to-[#08dcf8] */
+}
+.active2{
+  width: 52%;
+  height: 100%;
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+transition: all 300ms ease-in-out;
+background-color: #078fd3 ;
+}
+.active3{
+  width: 53%;
+  height: 100%;
+  position: fixed;
   visibility: visible;
   top: 0;
   left: 0;
 transition: all 200ms ease-in-out;
-
-  
+background-color: cyan ;
+}
+.active4{
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  visibility: visible;
+  top: 0;
+  left: 0;
+transition: all 500ms ease-in-out;
 background-color: rgb(46, 44, 44);
 }
+
 .ham{
   width: var(--ham-width);
   height: 3px;
@@ -182,23 +221,18 @@ transition: all 200ms ease-in-out;
   transform: rotate(90deg);
   transition: all 200ms ease-in-out;
 }
+
+/* ======================== Contact Us ============================== */
+
 .contactUs{
-  width: 50%;
-  min-width: 350px;
   flex-direction: column;
   display: flex;
-  margin: auto 2rem;
+  /* margin: auto 2rem; */
   column-gap: 4rem;
-  overflow-x: hidden;
-  padding: 1rem;
+  /* overflow-x: hidden; */
+  /* padding: 1rem; */
 }
-.contactUs div{
-  display: inline-flex;
-  column-gap: 16px;
-  column-count: 2;
-  overflow-x: hidden;
 
-}
 .contactUs input{
   text-indent: 20px;
   width: 100%;
@@ -210,7 +244,22 @@ transition: all 200ms ease-in-out;
   letter-spacing: 1px;
   background-color: var(--input-color);
   margin-top: 1rem;
-  overflow-x: hidden;
+  position: relative;
+  /* overflow-x: hidden; */
+  
+  
+}
+.contactUs >input [type=text]{
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 3px;
+  left: 0;
+  border-bottom: #0af2fa 3px solid;
+  transform: translate(0%);
+  transition: all 500mx ease-in-out;
+  
+  /* overflow-x: hidden; */
   
   
 }
@@ -239,10 +288,53 @@ transition: all 200ms ease-in-out;
 
 
 }
-.mySkillPage{
-  column-count: 2;
-  column-gap: 30px;
-  display: inline-flex;
+
+
+/* ======================== projects card ============================== */
+.card{
+  /* width: fit-content;
+  height: fit-content; */
+  box-shadow:  5px 5px 7px #111111,
+             -5px -5px 7px #292929;
+  position: relative;
+  transition: all 500ms ease-in-out;
+  overflow: hidden;
 }
-
-
+.top-ltrb{
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top:#05acff 3px solid;
+  transform: translate(-100%);
+  background-color: #fff;
+  transition: all 500ms ease-in-out;
+  
+}
+.top-ltrb:hover{
+  content: '';
+  position: absolute;
+  transform: translate(0%);
+  transition: all 500ms ease-in-out;
+  
+}
+.bottom-rtlb::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+  left: 0;
+  border-bottom:#05acff 3px solid;
+  transform: translate(100%);
+  background-color: #fff;
+  transition: all 500ms ease-in-out;
+  
+}
+.bottom-rtlb:hover::after{
+  content: '';
+  position: absolute;
+  transform: translate(0%);
+  transition: all 500ms ease-in-out;
+  
+}
