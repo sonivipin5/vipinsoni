@@ -16,7 +16,7 @@ const Contact = () => {
 
         {/* Contact card */}
        <div className="flex justify-center" data-aos='fade-up'>
-          <div className="card w-3/4 h-fit rounded-xl lg:count-2">
+          <div className="card w-3/4 mb-10 lg:h-fit rounded-xl lg:count-2">
 
             <div className="contactInfo lg:w-[40%] p-5 text-white">
               <div className="bg-[#1f0a4e] h-full flex flex-col justify-between p-5 rounded-xl blue-gradient">
@@ -25,7 +25,7 @@ const Contact = () => {
                 <div className="my-10 font-semibold ">
                 <div><RiPhoneFill className="inline-block text-cyan-500 bg-white rounded-full p-1 text-2xl shadow-2xl"/><p className="inline-block px-3">9669507012</p></div><br />
                 <div><RiMailLine className="inline-block text-cyan-500  bg-white rounded-full p-1 text-2xl" /><p className="inline-block px-3"> sonivipin@gmail.com</p></div><br />
-                <div className="inline-flex"><RiMapPinFill className="inline-block text-cyan-500  bg-white rounded-full p-1 text-2xl" /><p className="inline w-full px-3"> Home, W83J+3QG, NH 44, Dabra </p></div><br />
+                <div className="inline-block"><RiMapPinFill className="inline-block text-cyan-500  bg-white rounded-full p-1 text-2xl" /><p className="inline w-full px-3"> Home, W83J+3QG, NH 44, Dabra </p></div><br />
                 </div>
                 <div className=" text-center  space-x-3">
                 <RiFacebookLine className="text-3xl transition-all inline-block cursor-pointer hover:text-blue-600 hover:bg-white hover:rounded-full p-[2px]"/>
