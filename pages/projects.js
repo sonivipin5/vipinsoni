@@ -1,5 +1,6 @@
 
-
+import Image from 'next/image'
+import favico from '../public/favicon.ico'
 import React from 'react'
 
 const Projects = () => {
@@ -19,7 +20,7 @@ const Projects = () => {
             <h2 className='text-3xl font-bold link'>MERN Projects</h2>
 
             <div className='card w-fit h-fit m-auto my-7'>
-              <img src="/favicon.ico" alt="" />
+              <Image src={favico} width={200} height={200} alt="projects" />
             </div>
             
           </div>
@@ -29,7 +30,7 @@ const Projects = () => {
             <h3 className='text-3xl font-bold link'>NextJs + Wordpress</h3>
 
             <div className='card w-fit h-fit m-auto my-7'>
-              <img src="/favicon.ico" alt="" />
+              <Image src={favico} width={200} height={200} alt="projects" />
             </div>
 
           </div>
@@ -38,7 +39,7 @@ const Projects = () => {
             <h4 className='text-3xl font-bold link'>NextJs + Strapi</h4>
 
             <div className='card w-fit h-fit m-auto my-7'>
-              <img src="/favicon.ico" alt="" />
+              <Image src={favico} width={200} height={200} alt="projects" />
             </div>
 
           </div>
@@ -50,16 +51,16 @@ const Projects = () => {
         
           <div className="flex justify-center flex-wrap">
           <div className='card mx-5 my-7' data-aos='zoom-in'>
-                <img src="/favicon.ico" alt="" />
+                <Image src={favico} width={200} height={200} alt="projects" />
           </div>
           <div className='card mx-5 my-7' data-aos='zoom-in'>
-                <img src="/favicon.ico" alt="" />
+                <Image src={favico} width={200} height={200} alt="projects" />
           </div>
           <div className='card mx-5 my-7' data-aos='zoom-in'>
-                <img src="/favicon.ico" alt="" />
+                <Image src={favico} width={200} height={200} alt="projects" />
           </div>
           <div className='card mx-5 my-7' data-aos='zoom-in'>
-                <img src="/favicon.ico" alt="" />
+                <Image src={favico} width={200} height={200} alt="projects" />
           </div>
           
           </div>

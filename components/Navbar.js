@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter} from "next/router";
 import React, { useEffect } from "react";
 
 const Navbar = () => {
@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const filepath = router.asPath;
 
-  const ul = (e) => {
+  const ul = () => {
     let ul = document.querySelectorAll(".ul a");
     ul.forEach((e, i) => {
       let a = e.href.split("http://localhost:3000")[1];
@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    ul();
+      ul();
   }, [ul]);
 
 

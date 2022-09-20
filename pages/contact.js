@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div className="container m-auto">
       <div className=" w-full min-h-screen  ">
-        <div className=" text-center p-10">
+        <div className=" text-center p-10" data-aos='fade-down'>
           <h1 className=" text-gradient text-6xl font-semibold ">
             Contact Us
           </h1>
@@ -25,7 +25,7 @@ const Contact = () => {
                 <div className="my-10 font-semibold ">
                 <div><RiPhoneFill className="inline-block text-cyan-500 bg-white rounded-full p-1 text-2xl shadow-2xl"/><p className="inline-block px-3">9669507012</p></div><br />
                 <div><RiMailLine className="inline-block text-cyan-500  bg-white rounded-full p-1 text-2xl" /><p className="inline-block px-3"> sonivipin@gmail.com</p></div><br />
-                <div className="inline-block"><RiMapPinFill className="inline-block text-cyan-500  bg-white rounded-full p-1 text-2xl" /><p className="inline-block px-3"> Home, W83J+3QG, NH 44, Dabra </p></div><br />
+                <div className="inline-flex"><RiMapPinFill className="inline-block text-cyan-500  bg-white rounded-full p-1 text-2xl" /><p className="inline w-full px-3"> Home, W83J+3QG, NH 44, Dabra </p></div><br />
                 </div>
                 <div className=" text-center  space-x-3">
                 <RiFacebookLine className="text-3xl transition-all inline-block cursor-pointer hover:text-blue-600 hover:bg-white hover:rounded-full p-[2px]"/>
@@ -42,7 +42,8 @@ const Contact = () => {
               <form action="#" className="contactUs w-full">
 
                 <div className='lg:count-2 gap-4'>
-                  <input type="text" name="name" id="name" placeholder="Name" />
+                  <input type="text" name="name" id="name" placeholder="Name" className=".name" />
+                  <label htmlFor="name"><span></span></label>
 
                   <input type="email" name="email" id="name" placeholder="Email" />
                 </div>

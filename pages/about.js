@@ -1,5 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import allLangImage from '../public/all-language-image.png'
+import vipin from '../public/vipin1.png'
 
 const About = () => {
   return (
@@ -9,7 +12,9 @@ const About = () => {
     {/* About my self */}
     <div className=" mx-10 lg:w-[50%]" data-aos='fade-right'>
 
-      <img src="/vipin1.png"  alt="vipin Soni" className='m-auto w-2/5' />
+      <div className="m-auto text-center">
+      <Image src={vipin} width={300}  height={300} alt="vipin Soni" className=' w-2/5' />
+      </div>
 
       <h1 className='text-7xl p-5 font-bold text-gradient w-full text-center'>Me, Myself & I</h1><br />
 
@@ -29,7 +34,8 @@ const About = () => {
 
     {/* Image section */}
     <div className="m-auto lg:mr-16 my-16 rounded-md w-[65%] lg:w-[50%] h-full bg-white "  data-aos='fade-left'>
-      <img src="/all-language-image.png" alt="skills" className='w-full ' />
+      <Image src={allLangImage }/>
+      {/* <Image src="/all-language-image.png" alt="skills" className='w-full ' /> */}
     </div>
     
   </div>

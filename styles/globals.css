@@ -1,58 +1,57 @@
 @tailwind base;
 @tailwind components;
-.text-gradient{
+
+.text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-bl from-[#05acff] to-[#08dcf8];
 }
+
 @layer utilities {
-  .count-2{
+  .count-2 {
     column-count: 2;
-    display: inline-flex;}
-  .count-3{
+    display: inline-flex;
+  }
+
+  .count-3 {
     column-count: 3;
-    display: inline-flex;}
-  .blue-gradient{
-    background: rgb(99,102,241);
-background: linear-gradient(133deg, rgba(99,102,241,1) 0%, rgba(168,85,247,1) 50%, rgba(168,85,247,1) 100%);}
+    display: inline-flex;
+  }
+
+  .blue-gradient {
+    background: rgb(99, 102, 241);
+    background: linear-gradient(133deg, rgba(99, 102, 241, 1) 0%, rgba(168, 85, 247, 1) 50%, rgba(168, 85, 247, 1) 100%);
+  }
 }
+
 @tailwind utilities;
-
-
 
 html,
 body {
   min-width: 475px;
-  height:100%;
+  height: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color:#1D1D1D ;
-    
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #1d1d1d;
 }
 
-
-
-
-
-:root{
-  --primary-color:#1D1D1D;
+:root {
+  --primary-color: #1d1d1d;
   --secondary-color: #181818;
   --base-text-color: #706e6e;
-  --input-color:#2B2B2B;
+  --input-color: #2b2b2b;
   --ham-width: 30px;
   --ham-bgc: #0af2fa;
 }
 
-
-.btc{
+.btc {
   color: #706e6e;
 }
-.link{
-  color:  #05acff;
+
+.link {
+  color: #05acff;
 }
 
-
-.cyanSlideEffect{
+.cyanSlideEffect {
   width: 15rem;
   margin: 1.5rem 0;
   height: 3.5rem;
@@ -64,13 +63,15 @@ body {
   z-index: 1;
   letter-spacing: 3px;
   font-weight: bold;
-  overflow: hidden; 
+  overflow: hidden;
 }
-.cyanSlideEffect:hover{
+
+.cyanSlideEffect:hover {
   color: black;
 }
-.cyanSlideEffect::before{
-  content: '';
+
+.cyanSlideEffect::before {
+  content: "";
   position: absolute;
   width: 120%;
   height: 100%;
@@ -79,12 +80,13 @@ body {
   color: #08dcf8;
   background-color: #08dcf8;
   transform: translate(-100%) skew(-30deg);
-  transition:all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
-.cyanSlideEffect:hover::before{
+
+.cyanSlideEffect:hover::before {
   z-index: -1;
   transform: translate(0%) skew(-30deg);
-  transition:all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .square {
@@ -98,86 +100,92 @@ body {
   padding-bottom: 50%;
 }
 
-.hamburger{
+.hamburger {
   width: 50px;
   height: 50px;
   position: absolute;
   border-radius: 50%;
-background-color: rgb(46, 44, 44);
+  background-color: rgb(46, 44, 44);
 }
-.active1{
+
+.active1 {
   width: 51%;
   height: 100%;
   position: fixed;
   visibility: visible;
   top: 0;
   left: 0;
-transition: all 400ms ease-in-out;
-background-color:  rgb(83, 11, 165);
-/* [#05acff] to-[#08dcf8] */
+  transition: all 400ms ease-in-out;
+  background-color: rgb(83, 11, 165);
+  /* [#05acff] to-[#08dcf8] */
 }
-.active2{
+
+.active2 {
   width: 52%;
   height: 100%;
   position: fixed;
   visibility: visible;
   top: 0;
   left: 0;
-transition: all 300ms ease-in-out;
-background-color: #078fd3 ;
+  transition: all 300ms ease-in-out;
+  background-color: #078fd3;
 }
-.active3{
+
+.active3 {
   width: 53%;
   height: 100%;
   position: fixed;
   visibility: visible;
   top: 0;
   left: 0;
-transition: all 200ms ease-in-out;
-background-color: cyan ;
+  transition: all 200ms ease-in-out;
+  background-color: cyan;
 }
-.active4{
+
+.active4 {
   width: 50%;
   height: 100%;
   position: fixed;
   visibility: visible;
   top: 0;
   left: 0;
-transition: all 500ms ease-in-out;
-background-color: rgb(46, 44, 44);
+  transition: all 500ms ease-in-out;
+  background-color: rgb(46, 44, 44);
 }
 
-.ham{
+.ham {
   width: var(--ham-width);
   height: 3px;
   top: 2rem;
   left: 1rem;
-position: fixed;
-background-color: var(--ham-bgc); 
-transition: all 200ms ease-in-out;
-z-index: 11;
+  position: fixed;
+  background-color: var(--ham-bgc);
+  transition: all 200ms ease-in-out;
+  z-index: 11;
 }
 
-.ham::before{
+.ham::before {
   content: "";
   top: 10px;
   width: var(--ham-width);
   height: 3px;
-position: absolute;
-background-color: var(--ham-bgc); 
-transition: all 200ms ease-in-out;
+  position: absolute;
+  background-color: var(--ham-bgc);
+  transition: all 200ms ease-in-out;
 }
-.ham::after{
+
+.ham::after {
   content: "";
   top: 20px;
   width: var(--ham-width);
   height: 3px;
-position: absolute;
-background-color: var(--ham-bgc); 
-transition: all 200ms ease-in-out;
+  position: absolute;
+  background-color: var(--ham-bgc);
+  transition: all 200ms ease-in-out;
 }
+
 /* ham-cover */
-.hamBack{
+.hamBack {
   width: 50px;
   height: 50px;
   z-index: 16;
@@ -189,42 +197,44 @@ transition: all 200ms ease-in-out;
 
 /* ham-active */
 
-.ham-active{
+.ham-active {
   width: var(--ham-width);
   height: 3px;
   margin: 10px 0 0 2px;
   top: 2rem;
   left: 1rem;
   position: fixed;
-  background-color: var(--ham-bgc); 
+  background-color: var(--ham-bgc);
   transform: rotate(45deg);
   transition: all 200ms ease-in-out;
 }
-.ham-active::before{
-  content: '';
+
+.ham-active::before {
+  content: "";
   width: var(--ham-width);
   top: 10px;
   height: 3px;
   position: absolute;
-  background-color: var(--ham-bgc); 
+  background-color: var(--ham-bgc);
   transform: rotate(90deg);
   transition: all 200ms ease-in-out;
   display: none;
 }
-.ham-active::after{
-  content: '';
+
+.ham-active::after {
+  content: "";
   width: var(--ham-width);
   height: 3px;
   top: 1px;
   position: absolute;
-  background-color: var(--ham-bgc); 
+  background-color: var(--ham-bgc);
   transform: rotate(90deg);
   transition: all 200ms ease-in-out;
 }
 
 /* ======================== Contact Us ============================== */
 
-.contactUs{
+.contactUs {
   flex-direction: column;
   display: flex;
   /* margin: auto 2rem; */
@@ -233,7 +243,7 @@ transition: all 200ms ease-in-out;
   /* padding: 1rem; */
 }
 
-.contactUs input{
+.contactUs input {
   text-indent: 20px;
   width: 100%;
   height: 50px;
@@ -246,95 +256,81 @@ transition: all 200ms ease-in-out;
   margin-top: 1rem;
   position: relative;
   /* overflow-x: hidden; */
-  
+}
+
+.contactUs input:focus {
+  caret-color: #08dcf8;
   
 }
-.contactUs >input [type=text]{
-  content: '';
-  position: absolute;
-  width: 100%;
-  bottom: 3px;
-  left: 0;
-  border-bottom: #0af2fa 3px solid;
-  transform: translate(0%);
-  transition: all 500mx ease-in-out;
-  
-  /* overflow-x: hidden; */
-  
-  
-}
-.contactUs input::placeholder{
+
+.contactUs input::placeholder {
   color: var(--base-text-color);
   overflow: hidden;
-
 }
 
-.contactUs textarea{
+.contactUs textarea {
   text-indent: 20px;
   width: 100%;
   background-color: var(--input-color);
-  margin: 0 8px 8px 0;
+  margin: 1rem 8px 8px 0;
   outline: none;
   font-size: larger;
   font-weight: bold;
   letter-spacing: 1px;
   color: var(--base-text-color);
-  margin-top: 1rem;
+  caret-color: #08dcf8;
   overflow: hidden;
 }
-.contactUs textarea::placeholder{
+
+.contactUs textarea::placeholder {
   color: var(--base-text-color);
   overflow: hidden;
-
-
 }
 
-
 /* ======================== projects card ============================== */
-.card{
+.card {
   /* width: fit-content;
   height: fit-content; */
-  box-shadow:  5px 5px 7px #111111,
-             -5px -5px 7px #292929;
+  box-shadow: 5px 5px 7px #111111, -5px -5px 7px #292929;
   position: relative;
   transition: all 500ms ease-in-out;
   overflow: hidden;
 }
-.top-ltrb{
-  content: '';
+
+.top-ltrb {
+  content: "";
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
-  border-top:#05acff 3px solid;
+  border-top: #05acff 3px solid;
   transform: translate(-100%);
   background-color: #fff;
   transition: all 500ms ease-in-out;
-  
 }
-.top-ltrb:hover{
-  content: '';
+
+.top-ltrb:hover {
+  content: "";
   position: absolute;
   transform: translate(0%);
   transition: all 500ms ease-in-out;
-  
 }
-.bottom-rtlb::after{
-  content: '';
+
+.bottom-rtlb::after {
+  content: "";
   position: absolute;
   width: 100%;
   bottom: 2px;
   left: 0;
-  border-bottom:#05acff 3px solid;
+  border-bottom: #05acff 3px solid;
   transform: translate(100%);
   background-color: #fff;
   transition: all 500ms ease-in-out;
-  
 }
-.bottom-rtlb:hover::after{
-  content: '';
+
+.bottom-rtlb:hover::after {
+  content: "";
   position: absolute;
   transform: translate(0%);
   transition: all 500ms ease-in-out;
-  
 }
