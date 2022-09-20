@@ -13,10 +13,10 @@ const Projects = () => {
       </div>
 
       {/* Projects section */}
-      <div className='w-full text-white lg:count-3 text-center m-auto  mt-5'>
+      <div className='w-full text-white lg:count-3 text-center overflow-hidden m-auto  mt-5'>
 
           {/* MERN Projects */}
-          <div className=' w-[95%] mx-10 ' data-aos='zoom-in'>
+          <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
             <h2 className='text-3xl font-bold link'>MERN Projects</h2>
 
             <div className='card w-fit h-fit m-auto my-7'>
@@ -26,7 +26,7 @@ const Projects = () => {
           </div>
 
           {/* NextJs + Wordpress */}
-          <div className=' w-[95%] mx-10' data-aos='zoom-in'>
+          <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
             <h3 className='text-3xl font-bold link'>NextJs + Wordpress</h3>
 
             <div className='card w-fit h-fit m-auto my-7'>
@@ -35,7 +35,7 @@ const Projects = () => {
 
           </div>
           {/* NextJs + Strapi */}
-          <div className=' w-[95%] mx-10' data-aos='zoom-in'>
+          <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
             <h4 className='text-3xl font-bold link'>NextJs + Strapi</h4>
 
             <div className='card w-fit h-fit m-auto my-7'>

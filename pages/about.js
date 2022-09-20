@@ -7,7 +7,7 @@ import vipin from '../public/vipin1.png'
 const About = () => {
   return (
     <div className="container m-auto">
-    <div className='  m-auto aboutPage lg:count-2 w-full min-h-screen '>
+    <div className='  m-auto aboutPage lg:count-2 w-full min-h-screen overflow-hidden'>
 
     {/* About my self */}
     <div className=" mx-10 lg:w-[50%]" data-aos='fade-right'>
@@ -34,7 +34,7 @@ const About = () => {
 
     {/* Image section */}
     <div className="m-auto lg:mr-16 my-16 rounded-md w-[65%] lg:w-[50%] h-full bg-white "  data-aos='fade-left'>
-      <Image src={allLangImage }/>
+      <Image src={allLangImage } alt="sills"/>
       {/* <Image src="/all-language-image.png" alt="skills" className='w-full ' /> */}
     </div>
     
