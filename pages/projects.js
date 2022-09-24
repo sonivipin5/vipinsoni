@@ -1,7 +1,6 @@
 
 import Image from 'next/image'
 import favico from '../public/favicon.ico'
-import myblog from '../public/myblog.jpg'
 import React, { useRef } from 'react'
 import { AiOutlineCloseSquare } from 'react-icons/ai'
 
@@ -58,7 +57,7 @@ const closeModal = () => {
 
             <div className='card w-fit h-fit m-auto my-7 '>
              
-              <Image onClick={modal} src={myblog} width={200} height={200} alt="projects" />
+              <Image onClick={modal} src={'/myblog.jpg'} width={200} height={200} alt="projects" />
                 
               
             </div>
