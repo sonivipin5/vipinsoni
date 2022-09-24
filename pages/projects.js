@@ -3,11 +3,9 @@ import Image from 'next/image'
 import favico from '../public/favicon.ico'
 import myblog from '../public/myblog.jpg'
 import React, { useRef } from 'react'
-import Modal from './modal'
 import { AiOutlineCloseSquare } from 'react-icons/ai'
 
 const Projects = (props) => {
-  console.log(props.openModal)
   const ref = useRef();
   const mainDiv = useRef();
   const modal = () => {
@@ -45,7 +43,6 @@ const closeModal = () => {
             </div>
             
           </div>
-      {console.log(Modal)}
           {/* NextJs + Wordpress */}
           <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
             <h3 className='text-3xl font-bold link'>NextJs + Wordpress</h3>
@@ -101,7 +98,7 @@ const closeModal = () => {
             >
               <AiOutlineCloseSquare/>
             </span>
-            <iframe className="w-full h-[90%] transition-all" src='https://my-strapi-blog.netlify.app/' />
+            <iframe className="w-full h-full transition-all" src='https://my-strapi-blog.netlify.app/' />
           </div>
         </div>
       </div>
