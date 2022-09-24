@@ -5,7 +5,7 @@ import FiInstagram from 'react-icons/fi'
 
 const Contact = () => {
   return (
-    <div className="container m-auto">
+    <div className="container m-auto" id="contact">
       <div className=" w-full min-h-screen  ">
         <div className=" text-center p-10" data-aos='fade-down'>
           <h1 className=" text-gradient text-6xl font-semibold ">
@@ -41,7 +41,7 @@ const Contact = () => {
 
               <form action="#" className="contactUs w-full">
 
-                <div className='lg:count-2 gap-4'>
+                <div className='lg:count-2 gap-2'>
                   <input type="text" name="name" id="name" placeholder="Name" className=".name" />
                   <label htmlFor="name"><span></span></label>
 

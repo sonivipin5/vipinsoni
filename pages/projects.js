@@ -1,11 +1,32 @@
 
 import Image from 'next/image'
 import favico from '../public/favicon.ico'
-import React from 'react'
+import myblog from '../public/myblog.jpg'
+import React, { useRef } from 'react'
+import Modal from './modal'
+import { AiOutlineCloseSquare } from 'react-icons/ai'
 
-const Projects = () => {
+const Projects = (props) => {
+  console.log(props.openModal)
+  const ref = useRef();
+  const mainDiv = useRef();
+  const modal = () => {
+    
+    if (ref.current.classList.contains('modalBox')) {
+        ref.current.classList.toggle('hidden')
+    }
+    let body = document.querySelector('body')
+    body.style.overflow = "hidden";
+};
+const closeModal = () => {
+    if (ref.current.classList.contains('modalBox')) {
+        ref.current.classList.toggle('hidden')
+    }
+    let body = document.querySelector('body')
+    body.style.overflow = "visible";
+}
   return (
-    <div className="container m-auto ">
+    <div ref={mainDiv} className="container m-auto relative ">
     <div className=' w-full min-h-screen overflow-hidden'>
       {/* Heading section */}
       <div className="m-auto">
@@ -24,7 +45,7 @@ const Projects = () => {
             </div>
             
           </div>
-
+      {console.log(Modal)}
           {/* NextJs + Wordpress */}
           <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
             <h3 className='text-3xl font-bold link'>NextJs + Wordpress</h3>
@@ -38,12 +59,16 @@ const Projects = () => {
           <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
             <h4 className='text-3xl font-bold link'>NextJs + Strapi</h4>
 
-            <div className='card w-fit h-fit m-auto my-7'>
-              <Image src={favico} width={200} height={200} alt="projects" />
+            <div className='card w-fit h-fit m-auto my-7 '>
+             
+              <Image onClick={modal} src={myblog} width={200} height={200} alt="projects" />
+                
+              
             </div>
 
           </div>
       </div>
+
 
       {/* Other project section */}
       <div className=' w-full p-5 ' data-aos='fade-up'>
@@ -67,6 +92,19 @@ const Projects = () => {
       </div>
 
     </div>
+    <div ref={ref} className="modalBox transition-all hidden z-[20] fixed top-0 left-0 bg-[#1D1D1D]  min-w-[475px] w-full h-full">
+        <div className="transition-all w-full h-full flex justify-center items-center ">
+          <div className=" transition-all bg-white w-[90%] h-[90%] m-10 flex justify-center items-center">
+            <span
+              onClick={closeModal}
+              className="fixed top-5 right-5 text-3xl cursor-pointer text-white"
+            >
+              <AiOutlineCloseSquare/>
+            </span>
+            <iframe className="w-full h-[90%] transition-all" src='https://my-strapi-blog.netlify.app/' />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

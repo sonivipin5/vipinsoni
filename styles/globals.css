@@ -26,6 +26,7 @@
 
 html,
 body {
+  scroll-behavior: smooth;
   min-width: 475px;
   height: 100%;
   padding: 0;
@@ -66,7 +67,7 @@ body {
   overflow: hidden;
 }
 
-.cyanSlideEffect:hover {
+.cyanSlideEffect:focus {
   color: black;
 }
 
@@ -83,7 +84,8 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-.cyanSlideEffect:hover::before {
+.cyanSlideEffect:focus:before {
+  color: black;
   z-index: -1;
   transform: translate(0%) skew(-30deg);
   transition: all 300ms ease-in-out;
@@ -333,4 +335,9 @@ body {
   position: absolute;
   transform: translate(0%);
   transition: all 500ms ease-in-out;
+}
+
+/* ======================== scroll lock ============================== */
+.scrollLock{
+  overflow-y: hidden;
 }

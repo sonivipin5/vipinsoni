@@ -5,10 +5,12 @@ import Projects from "./projects";
 import Skills from "./skills";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { AiOutlineCloseSquare } from "react-icons/ai";
 
 
 export default function Home() {
+  
   useEffect(() => {
     Aos.init({
       offset: 300,
@@ -17,6 +19,7 @@ export default function Home() {
       delay: 100,
     })
    }, [])
+   
    
   
   return (
@@ -33,7 +36,7 @@ export default function Home() {
         
           </div>
           <p className=" text-gray-400 text-xl mt-3 ">Front End  Developer / MERN Stack Developer </p>
-          <Link href={"/"} >
+          <Link href={"#contact"} >
               <button className="cyanSlideEffect"> Contact me! </button>
             </Link>
           </div>
@@ -44,7 +47,7 @@ export default function Home() {
     <Projects/>
     <About/>
    <Contact/>
-    
+   
 
     </div>
   )
