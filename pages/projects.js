@@ -3,6 +3,7 @@ import Image from 'next/image'
 import favico from '../public/favicon.ico'
 import React, { useRef } from 'react'
 import { AiOutlineCloseSquare } from 'react-icons/ai'
+import style from '../styles/Projects.module.css'
 
 const Projects = (props) => {
   const ref = useRef();
@@ -34,40 +35,50 @@ const closeModal = () => {
       <div className='w-full text-white lg:count-3 text-center overflow-hidden m-auto  mt-5'>
 
           {/* MERN Projects */}
-          <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
+          {/* <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
             <h2 className='text-3xl font-bold link'>MERN Projects</h2>
 
             <div className='card w-fit h-fit m-auto my-7'>
               <Image src={favico} width={200} height={200} alt="projects" />
             </div>
             
-          </div>
+          </div> */}
           {/* NextJs + Wordpress */}
-          <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
+          {/* <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
             <h3 className='text-3xl font-bold link'>NextJs + Wordpress</h3>
 
             <div className='card w-fit h-fit m-auto my-7'>
               <Image src={favico} width={200} height={200} alt="projects" />
             </div>
 
-          </div>
+          </div> */}
           {/* NextJs + Strapi */}
           <div className=' w-[95%] m-auto lg:mx-10' data-aos='zoom-in'>
-            <h4 className='text-3xl font-bold link'>NextJs + Strapi</h4>
-
-            <div className='card w-fit h-fit m-auto my-7 '>
-             
-              <Image onClick={modal} src={'/myblog.jpg'} width={200} height={200} alt="projects" />
-                
-              
+            <h4 className='text-3xl font-bold link'>NextJs + Strapi + PostgreSQL</h4>
+            <div className='relative card w-fit h-fit m-auto my-7 p-5'>
+              <Image onClick={modal} src={'/myblog.jpg'} width={500} height={300} alt="projects" />
             </div>
 
           </div>
+
+          {/* <div className={`${style.flipcard} m-auto mt-10`} data-aos='zoom-in'>
+            <div className={`${style.flipinner} relative w-full h-full text-center transition-all `}>
+              <div className={`${style.front} grayscale-[100%]`}>
+                 <Image onClick={modal} src={'/myblog.jpg'} width={1000} height={1000} />
+              </div>
+              <div className={`${style.back} flex items-center justify-center text-2xl text-gradient font-bold grayscale-0 `}>
+              <h2>I develop this project with <br /><br />  NextJs + StrapiJs <br /> and  <br />  Postgresql <br />
+              <span className='text-purple-500'><a href="https://my-strapi-blog.netlify.app/" target="_blank" rel="noreferrer">Visit</a></span>
+              </h2>
+              
+              </div>
+            </div>
+          </div> */}
       </div>
 
 
       {/* Other project section */}
-      <div className=' w-full p-5 ' data-aos='fade-up'>
+      {/* <div className=' w-full p-5 ' data-aos='fade-up'>
         <h5 className='text-3xl font-bold link text-center'> Other Projects</h5>
         
           <div className="flex justify-center flex-wrap">
@@ -85,7 +96,7 @@ const closeModal = () => {
           </div>
           
           </div>
-      </div>
+      </div> */}
 
     </div>
     <div ref={ref} className="modalBox transition-all hidden z-[20] fixed top-0 left-0 bg-[#1D1D1D]  min-w-[475px] w-full h-full">

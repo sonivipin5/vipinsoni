@@ -1,9 +1,77 @@
-import React from "react";
+import React,{useRef} from "react";
 import Link from "next/link";
 import {  RiFacebookLine, RiInstagramLine, RiLinkedinLine, RiMailLine, RiMapPinFill, RiPhoneFill, RiTwitterLine } from "react-icons/ri";
-import FiInstagram from 'react-icons/fi'
+
+
 
 const Contact = () => {
+
+  const regex = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi;
+
+  const Name = useRef()
+  const email = useRef()
+  const subject = useRef()
+  const message = useRef()
+  const sendMessage = useRef()
+  const submitBtn = useRef()
+
+  const Pdefault = (e) => {
+      e.preventDefault()
+
+      const enterName = Name.current.value
+      const enterEmail = email.current.value
+      const enterSubject  = subject.current.value
+      const enterMessage = message.current.value
+   
+    
+        if(enterName.length <= 2){
+          return alert('Please Fill All the Fields \n\nMinimum 3 Character In Name \nEmail like this - example@example.com \nMinimum 10 - 10 Character In Subject And Message  ')
+        }
+        if(enterEmail != enterEmail.match(regex)){
+          return alert('Fill Email like this - example@example.com')
+        }
+        if(enterSubject.length <= 9){
+          return alert('Fill Subject Minimum 10 Character')
+        }
+        if(enterMessage.length <= 9){
+          return alert('Fill Message Minimum 10 Character')
+        }
+    
+      
+      console.log(submitBtn.current)
+      const reqBody ={
+        name: enterName,
+        email: enterEmail,
+        subject: enterSubject,
+        message: enterMessage
+      }
+      // reqBody.self = reqBody
+
+
+    fetch('/api/contactus',{
+      method: 'POST',
+      body: JSON.stringify(reqBody),
+      headers:{
+        'Content-Type': 'application/json'
+      }
+    }).then(response => response.json())
+      .then(data=>(data))
+
+      Name.current.value=''
+      email.current.value=''
+      subject.current.value=''
+      message.current.value=''
+
+      if(sendMessage.current.classList.contains('scale-0')){
+        sendMessage.current.classList.remove('scale-0')
+        setTimeout(() => {
+          sendMessage.current.classList.add('scale-0')
+         }, 2000)
+      }
+  }
+
+
+  
   return (
     <div className="container m-auto" id="contact">
       <div className=" w-full min-h-screen  ">
@@ -37,23 +105,26 @@ const Contact = () => {
             </div>
 
             {/* contactForm */}
-            <div className="contactForm lg:w-[60%] p-5">
+            <div className=" contactForm lg:w-[60%] p-5">
 
-              <form action="#" className="contactUs w-full">
+              <form method="POST" className=" relative contactUs w-full">
 
                 <div className='lg:count-2 gap-2'>
-                  <input type="text" name="name" id="name" placeholder="Name" className=".name" />
+                  <input ref={Name} min='3' type="text" name="name" id="name" placeholder="Name" className=".name" required />
                   <label htmlFor="name"><span></span></label>
 
-                  <input type="email" name="email" id="name" placeholder="Email" />
+                  <input ref={email} type="email" name="email" id="name" placeholder="Email" pattern="(\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b)" required />
                 </div>
 
-                <input type="text" name="subject" id="name" placeholder="Subject" />
+                <input ref={subject} type="text" name="subject" id="name" placeholder="Subject" required/>
 
-                <textarea type="text"  rows="5" name="message" id="name" placeholder="Message" />
+                <textarea ref={message} type="text"  rows="5" name="message" id="name" placeholder="Message" required />
 
-                <button className='cyanSlideEffect w-[40%]'> Send message!</button>
+                <button onClick={Pdefault} ref={submitBtn}  className='cyanSlideEffect  w-[40%]'> Send message!</button>
 
+              <div ref={sendMessage} className="absolute transition-transform text-center scale-0 top-1/4 text-4xl font-bold left-0 w-full h-full bg-transparent text-green-600">
+                  <p>Successful Send</p>
+              </div>
               </form>
 
             </div>
