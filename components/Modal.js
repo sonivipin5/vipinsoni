@@ -9,7 +9,7 @@ const Modal = () => {
           onClick={closeModal}
           className="fixed top-5 right-5 text-3xl cursor-pointer text-white"
         >
-          <AiOutlineCloseSquare/>
+          {/* <AiOutlineCloseSquare/> */}
         </span>
         <iframe className="w-full h-full transition-all" src='https://my-strapi-blog.netlify.app/' />
       </div>

@@ -4,25 +4,7 @@ import React, { useEffect } from "react";
 
 const Navbar = () => {
   const router = useRouter();
-
   const filepath = router.asPath;
-
-  const ul = () => {
-    let ul = document.querySelectorAll(".ul a");
-    ul.forEach((e, i) => {
-      let a = e.href.split("http://localhost:3000")[1];
-      if (a == filepath) {
-        e.classList.add("text-[cyan]");
-      } else {
-        e.classList.remove("text-[cyan]");
-      }
-    });
-  };
-
-  useEffect(() => {
-      ul();
-  }, [ul]);
-
 
   const hamToggel = (e) => {
     let ham = document.querySelector('.ham')
@@ -57,7 +39,7 @@ const Navbar = () => {
           <nav className="w-full ">
             <div className="text-white flex  flex-col  justify-center items-center ">
               <Link href={"/"}>
-                <h1 onClick={hamToggel}className=" bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 cursor-pointer   text-sha logo text-8xl font-extrabold mt-5">
+                <h1 onClick={hamToggel}className={` bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 cursor-pointer   text-sha logo text-8xl font-extrabold mt-5 `}>
                   V
                 </h1>
               </Link>
@@ -66,24 +48,24 @@ const Navbar = () => {
                 Web Developer
               </p>
             </div>
-            <ul onClick={ul} className="ul  text-[#706e6e]  text-xl flex flex-col  text-center">
+            <ul className="ul  text-[#706e6e]  text-xl flex flex-col  text-center">
               <Link href="/skills">
-                <a onClick={hamToggel}className=" hover:text-[cyan] w-full py-3 inline-block">
+                <a onClick={hamToggel}className={`${router.pathname==='/skills' && 'text-[cyan]'} hover:text-[cyan] w-full py-3 inline-block`}>
                   Skills
                 </a>
               </Link>
               <Link href="/projects">
-                <a onClick={hamToggel}className=" hover:text-[cyan] w-full py-3 inline-block">
+                <a onClick={hamToggel}className={`${router.pathname==='/projects' && 'text-[cyan]'} hover:text-[cyan] w-full py-3 inline-block`}>
                   Projects
                 </a>
               </Link>
               <Link href="about">
-                <a onClick={hamToggel}className=" hover:text-[cyan] w-full py-3 inline-block">
+                <a onClick={hamToggel}className={`${router.pathname==='/about' && 'text-[cyan]'} hover:text-[cyan] w-full py-3 inline-block`}>
                   About
                 </a>
               </Link>
               <Link href="/contact">
-                <a onClick={hamToggel}className=" hover:text-[cyan] w-full py-3 inline-block">
+                <a onClick={hamToggel}className={`${router.pathname==='/contact' && 'text-[cyan]'} hover:text-[cyan] w-full py-3 inline-block`}>
                   Contact
                 </a>
               </Link>
