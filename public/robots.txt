@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://vipinsoni.ga/
+
+# Sitemaps
+Sitemap: https://vipinsoni.ga/sitemap.xml
