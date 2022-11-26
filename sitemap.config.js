@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: 'https://vipinsoni.ga/',
     generateRobotsTxt: true,
     sitemapSize: 7000,
-    generateIndexSitemap: false
+    generateIndexSitemap: true
   }
