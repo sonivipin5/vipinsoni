@@ -1,9 +1,9 @@
 # *
 User-agent: *
-Allow: /
+Disallow: /modal
 
 # Host
-Host: https://vipinsoni.ga/
+Host: https://vipinsoni.ga
 
 # Sitemaps
 Sitemap: https://vipinsoni.ga/sitemap.xml

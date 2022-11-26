@@ -1,7 +1,13 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://vipinsoni.ga/',
+    siteUrl: 'https://vipinsoni.ga',
     generateRobotsTxt: true,
+    robotsTxtOptions:{
+      policies:[
+        {userAgent:'*', disallow: "/modal"}
+      ]
+    },
     sitemapSize: 7000,
-    generateIndexSitemap: false
+    generateIndexSitemap: false,
+    exclude:['/modal']
   }
