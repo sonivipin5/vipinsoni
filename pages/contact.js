@@ -4,7 +4,7 @@ import { RiFacebookLine, RiInstagramLine, RiLinkedinLine, RiMailLine, RiMapPinFi
 
 
 
-const ContactUs = () => {
+const Contact = () => {
 
     const sendMessage = useRef();
 
@@ -132,4 +132,4 @@ const ContactUs = () => {
     );
 };
 
-export default ContactUs;
+export default Contact;
