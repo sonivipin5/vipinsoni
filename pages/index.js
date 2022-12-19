@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import About from "./about";
-import Contact from "./contactus";
+import ContactUs from "./contactus";
 import Projects from "./projects";
 import Skills from "./skills";
 import Aos from 'aos'
@@ -46,7 +46,7 @@ export default function Home() {
     <Skills/>
     <Projects/>
     <About/>
-    <Contact/>
+    <ContactUs/>
    
 
     </div>
