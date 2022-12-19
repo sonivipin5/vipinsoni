@@ -71,6 +71,7 @@ body {
   color: black;
 }
 
+
 .cyanSlideEffect::before {
   content: "";
   position: absolute;
@@ -89,6 +90,10 @@ body {
   z-index: -1;
   transform: translate(0%) skew(-30deg);
   transition: all 300ms ease-in-out;
+}
+.cyanSlideEffect:active:before {
+  background-color: #026572;
+
 }
 
 .square {

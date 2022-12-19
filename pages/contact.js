@@ -38,8 +38,8 @@ const Contact = () => {
         }
     
       
-      console.log(submitBtn.current)
-      const reqBody ={
+    
+      const reqBody ={  
         name: enterName,
         email: enterEmail,
         subject: enterSubject,
@@ -138,4 +138,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+// export default Contact;

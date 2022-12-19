@@ -1,6 +1,6 @@
 import Link from "next/link";
 import About from "./about";
-import Contact from "./contact";
+import ContactUs from "./contactUs";
 import Projects from "./projects";
 import Skills from "./skills";
 import Aos from 'aos'
@@ -36,7 +36,7 @@ export default function Home() {
         
           </div>
           <p className=" text-gray-400 text-xl mt-3 ">Front End  Developer / MERN Stack Developer </p>
-          <Link href={"/contact"} >
+          <Link href={"/contactUs"} >
               <button className="cyanSlideEffect"> Contact me! </button>
             </Link>
           </div>
@@ -46,7 +46,7 @@ export default function Home() {
     <Skills/>
     <Projects/>
     <About/>
-   <Contact/>
+    <ContactUs/>
    
 
     </div>
