@@ -1,18 +1,14 @@
-import React, { useRef, useState } from "react";
+
+import { useRef, useState } from "react";
 import { RiFacebookLine, RiInstagramLine, RiLinkedinLine, RiMailLine, RiMapPinFill, RiPhoneFill, RiTwitterLine } from "react-icons/ri";
 
 
 
-const contactUs = () => {
+const ContactUs = () => {
+
+    const sendMessage = useRef();
 
     const regex = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi;
-
-    // const Name = useRef()
-    // const email = useRef()
-    // const subject = useRef()
-    // const message = useRef()
-    const sendMessage = useRef()
-    // const submitBtn = useRef()
 
     const [values, setValues] = useState({
         name: '',
@@ -20,10 +16,6 @@ const contactUs = () => {
         subject: '',
         message: ''
     });
-    const [submitted, setSubmitted] = useState('')
-
-
-
 
     const changeInput = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
@@ -108,7 +100,7 @@ const contactUs = () => {
                         {/* contactForm */}
                         <div className=" contactForm lg:w-[60%] p-5">
 
-                            <form onSubmit={Pdefault} className=" relative contactUs w-full">
+                            <form onSubmit={Pdefault} className=" relative contactus w-full">
 
                                 <div className='lg:count-2 gap-2'>
 
@@ -140,4 +132,4 @@ const contactUs = () => {
     );
 };
 
-export default contactUs;
+export default ContactUs;

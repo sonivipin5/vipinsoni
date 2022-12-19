@@ -1,12 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import About from "./about";
-import ContactUs from "./contactUs";
+import Contact from "./contactus";
 import Projects from "./projects";
 import Skills from "./skills";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect, useRef } from "react";
-import { AiOutlineCloseSquare } from "react-icons/ai";
+import { useEffect } from "react";
 
 
 export default function Home() {
@@ -46,7 +46,7 @@ export default function Home() {
     <Skills/>
     <Projects/>
     <About/>
-    <ContactUs/>
+    <Contact/>
    
 
     </div>
