@@ -8,6 +8,6 @@ module.exports = {
       ]
     },
     sitemapSize: 7000,
-    generateIndexSitemap: false,
+    generateIndexSitemap: true,
     exclude:['/modal']
   }
